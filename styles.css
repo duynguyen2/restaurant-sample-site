@@ -1,10 +1,23 @@
+body {
+    background: linear-gradient(160deg, white, rgb(70, 70, 242), rgb(80, 80, 224), rgb(200, 200, 234));
+    font-family: 'Metrophobic', 'Nunito', 'Merriweather', 'Arial';
+    margin: auto;
+    width: 100%;
+}
 
 nav {
+    display: flex;
+    align-items: center;
     background-color: aliceblue;
     width: 100%;
     background: linear-gradient(50deg, rgb(74, 74, 255), rgb(93, 93, 221), rgb(179, 209, 236), white);
     position: fixed;
     top: 0;
+    z-index: 1;
+}
+
+.navbar {
+    margin: 0px;
 }
 
 .navoptions {
@@ -43,40 +56,74 @@ nav {
 }
 
 .header {
-    padding-top: 55px;
+    position: relative;
+    margin-top: 55px auto;
+    padding: 10px;
+}
+
+#header-img {
+    aspect-ratio: 16 / 9;
+    display: flex;
+    position: relative;
+    width: 70%;
+    object-fit: cover;
+    vertical-align: baseline;
+    box-shadow: 0 1.5rem 3rem -0.72rem hsla(0, 0%, 0%, 0.25);
+    margin: auto;
+}
+
+.header-text {
+    position: relative;
+    top: 0;
+    left: 0;
+    display: flexbox;
+    justify-content: center;
+    justify-self: start;
+    flex: 1;
+    margin: auto;
+}
+
+.content {
+    flex: 1;
+    overflow: auto;
+    padding: 10px 0px 100px 0px;
+    margin: auto;
 }
 
 .description {
-    background-color: rgb(143, 227, 255);
+    display: block;
+    background-color: rgba(143, 227, 255, 40%);
     width: 100%;
 }
 
-#portrait {
+.description-text {
     display: inline-block;
-    margin-right: 0;
+    width: 50%;
+    flex: 1;
+    margin: auto;
 }
 
-.description .description-text {
+.description img {
     display: inline-block;
-    vertical-align: middle;
-    margin-left: 0;
-}
-
-#portrait {
-    width: 40%;
+    width: 50%;
+    flex: 1;
+    margin: auto;
+    object-fit: contain;
 }
 
 .Menu {
-    background-color: rgb(77, 134, 153);
+    background-color: rgba(77, 134, 153, 40%);
+    margin: auto;
+    padding: 10px;
 }
 
 .Menu .menu-item {
     list-style-type: none;
-
 }
 
 .Gallery {
     padding: 2rem;
+    width: 100%;
 }
 
 .gallery-wrapper {
@@ -88,7 +135,8 @@ nav {
 .slider {
     display: flex;
     aspect-ratio: 16 / 9;
-    overflow-x: 0;
+    overflow-x: auto;
+    overflow-x: hidden;
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
     box-shadow: 0 1.5rem 3rem -0.72rem hsla(0, 0%, 0%, 0.25);
@@ -98,7 +146,7 @@ nav {
 .slider img {
     flex: 1 0 100%;
     scroll-snap-align: start;
-    object-fit: start;
+    object-fit: cover;
 }
 
 .slider-nav {
@@ -122,6 +170,14 @@ nav {
 
 .slider-nav a:hover {
     opacity: 1;
+}
+
+.location-information {
+    display: block;
+    text-align: center;
+    flex: 1;
+    margin-top: 100px;
+    margin-bottom: 120px;
 }
 
 .Contact {
