@@ -20,7 +20,6 @@ nav {
     position: fixed;
     top: 0;
     z-index: 1;
-    padding: auto;
 }
 
 .navbar {
@@ -100,7 +99,7 @@ nav {
     display: block;
     background-color: rgba(143, 227, 255, 40%);
     width: 100%;
-    padding: 32px 0px 32px 32px;
+    padding-left: 32px;
 }
 
 .description-text {
@@ -108,16 +107,18 @@ nav {
     width: 50%;
     flex: 1;
     margin: auto;
+    margin: 32px auto;
 }
 
 .description img {
-    display: inline-block;
+    display: inline;
     flex: 1;
     margin: auto;
     object-fit: contain;
     position: relative;
-    width: 50%;
+    width: 40vw;
     height: auto;
+    float: right;
 }
 
 .Menu {
@@ -128,6 +129,10 @@ nav {
 
 .Menu .menu-item {
     list-style-type: none;
+}
+
+.menu-item-name, .menu-item-price {
+    font-weight: bold;
 }
 
 .Gallery {
